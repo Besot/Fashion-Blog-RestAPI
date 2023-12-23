@@ -47,10 +47,11 @@ public class WebSecurityConfig {
          return httpSecurity
                  .authorizeHttpRequests(httpRequest->
                          httpRequest.requestMatchers( "/login", "/", "/sign-up").permitAll())
-                 //  //TODO: I made changes on the above line to have "/login" endpoint permitted
+                 //  // the above line to have "/login" endpoint permitted
+
                  //permitting access to these endpoints without first authenticating or authorising.
                  .formLogin(loginForm-> loginForm.loginPage("/login")
-                         //TODO: I made changes on the above line
+               
                          .loginProcessingUrl("/dashboard"))
                  .logout(logout->logout.logoutUrl("/logout"))
                  .cors(AbstractHttpConfigurer::disable)//Cross Origin Resource Sharing...disabling access to our resources(what are resources?) across(in and out) our application.
