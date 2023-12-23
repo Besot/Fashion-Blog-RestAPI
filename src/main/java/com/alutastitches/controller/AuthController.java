@@ -36,13 +36,12 @@ public class AuthController {
     public String login(){
         return "dashboard";
     }
-    //TODO: I created the method. To handle PostMapping login processing.
+    //this method  handle PostMapping login processing.
     @GetMapping("/dashboard")
     public String dashBoard(){
         return "dashboard";
     }
 
-    //TODO: I made changes on the method above to handle login successUrl processing.
 
     @PostMapping("/sign-up")
     public String signUp(@ModelAttribute UserDto userDto){
