@@ -18,6 +18,8 @@ public class PostController {
     public PostController(PostServiceImpl postService){
         this.postService= postService;
     }
+
+    
     @PostMapping("/create-post")
     public ResponseEntity<Post> createPost(@RequestBody Post newPost){
         return postService.savePost(newPost);
